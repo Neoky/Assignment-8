@@ -38,7 +38,7 @@ template <class T>
 HashTable<T>::HashTable(int x) {
   x = x*2;
   for (x; (x%2 == 0 || x%3 == 0); x++);
-  std::cout << x << std::endl;
+  //std::cout << x << std::endl;
   //while 
   size = x;
   data = (T*)malloc(size*sizeof(T));
@@ -95,9 +95,9 @@ void HashTable<T>::ShowFill(ostream& os) const {
 template <class T>
 void HashTable<T>::ShowContents(ostream& os) const {
   for(int i = 0; i < size; i++) {
-    //if (data[i]) {
+    if (data[i]) {
       os << data[i] << "\t ";
-    //}
+    }
   }
 }
 
